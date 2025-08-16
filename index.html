@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tungtung.works</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* 讓圖片與影片滿版 */
+    img, video {
+      width: 100%;
+      height: auto;
+      display: block; /* 移除下方可能的空隙 */
+    }
+
+    /* 圖片與影片的間隔 */
+    img {
+      margin-bottom: 0.2cm; /* 讓圖片與影片之間保留間距 */
+    }
+
+    .box {
+      background-color: rgb(255, 255, 255); /* 內容背景色 */
+      padding: 20px 30px;      /* 內距（padding） */
+      margin: 30px;             /* 外距（margin） */
+      border-width: 5px;
+      border-style: solid;
+      border-color: rgb(255, 255, 255);
+      text-align: center;
+    }
+
+    .fixed-box {
+      width: 400px;             /* 內容區域寬度 */
+      height: 50px;             /* 內容區域高度 */
+      overflow: auto;           /* 自動判斷是否產生內部卷軸 */
+      text-align: center;
+      margin: 30px auto;
+    }
+
+    body {
+      background-color: #ffffff;
+      margin: 0; /* 移除預設邊距，避免圖片影片沒對齊 */
+    }
+
+    /* 🔽 回到TOP按鈕樣式 */
+    #backToTop {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background-color: #ffffff; /* 灰色箭頭 */
+      color: rgb(159, 159, 159);
+      border: none;
+      border-radius: 100%;
+      width: 45px;
+      height: 45px;
+      font-size: 22px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    
+      box-shadow: 0 4px 6px rgba(124, 124, 124, 0.2);
+    }
+
+    #backToTop:hover {
+      background-color: #555;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img src="../img/monster.JPG" alt="monster"> 
+
+    <video controls>
+      <source src="../video/孩子.mp4" type="video/mp4">
+      <source src="孩子.ogg" type="video/ogg">
+    </video>
+
+    <header>
+      <h6>tungtung's Portfolio</h6>
+    </header>
+  </main>
+
+  <div class="box">
+    <br>文字介紹
+    <br>文字介紹文字介紹
+    <br>文字介紹文字介紹文字介紹
+  </div>
+  
+  <div class="box fixed-box">
+    <br>文字介紹文字介紹文字介紹文字介紹
+    <br>文字介紹文字介紹
+    <br>文字介紹
+  </div>
+
+  <!-- 🔽 回到TOP箭頭 -->
+  <button id="backToTop">↑</button>
+
+  <script>
+    const backToTop = document.getElementById("backToTop");
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
