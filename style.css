@@ -1,0 +1,45 @@
+h1 {
+  display: none;    
+}
+
+p {
+  color: black;
+}
+
+.box {
+  background-color: lightblue; /* 內容背景色 */
+  padding: 20px;            /* 內距（padding） */
+  margin: 30px;             /* 外距（margin） */
+  /* 邊框（border） */
+  border-width: 5px;
+  border-style: solid;
+  border-color: blue;
+}
+
+/* 寬度大於 600 時 */
+@media (min-width: 600px) {
+  h6 {
+    display: block;    
+  }
+
+  p {
+    color: red;
+  }
+  
+  .box {
+    width: 300px;
+    margin: auto;
+  }
+}
+
+/* 寬度大於 1024 時 */
+@media (min-width: 1024px) {
+  p {
+    color: blue;
+  }
+  
+  .box {
+    width: 600px;
+    margin: auto;
+  }
+}
